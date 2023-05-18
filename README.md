@@ -93,7 +93,7 @@ export class YourComponent implements OnDestroy {
 
 In your component HTML file, use the Kitaboo-PWA-SDK custom element:
 ```
-<kitaboo-reader #kitabooapplication (kitabooEvent)="kitabooEvent($event)" [usertoken]="usertoken" [bookID]="bookID" [language]="language"></kitaboo-reader>
+<kitaboo-reader (kitabooEvent)="kitabooEvent($event)" [usertoken]="usertoken" [bookID]="bookID" [language]="language"></kitaboo-reader>
 ```
 ### Angular.json Configuration
 
@@ -109,7 +109,13 @@ Update your angular.json file to include the Kitaboo-PWA-SDK assets in the build
               {
                 "glob": "**/*",
                 "input": "./node_modules/@ashishayadav/kitaboo-pwa-sdk/sdk/",
-                "output": "./assets/kitaboo/"
+                "output": "./assets/kitaboo/",
+                "ignore": ["main.js", "vendor.js", "runtime.js", "polyfills.js", "config/*", "services/*", "node_modules_firebase_compat_*"]
+              },
+              {
+                "glob": "node_modules_firebase_compat_*.js",
+                "input": "./node_modules/@ashishayadav/kitaboo-pwa-sdk/sdk/",
+                "output": "./"
               }
             ]
           }
