@@ -1,0 +1,13 @@
+{
+  "name": "@ashishayadav/kitaboo-pwa-sdk",
+  "version": "1.0.0-alpha.2",
+  "dependencies": {
+    "tslib": "^2.2.0"
+  },
+  "repository": "git://github.com:AshishAYadav/kitaboo-pwa-sdk.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "public-api.js",
+  "typings": "public-api.d.ts"
+}
