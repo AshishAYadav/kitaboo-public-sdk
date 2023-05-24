@@ -14,13 +14,15 @@ To install a private package from a custom registry such as "https://npm.pkg.git
 
 
     ```
-    //npm.pkg.github.com/:_authToken=<GITHUB_USERNAME>:<GITHUB_TOKEN>
+     @${OWNER}:registry=https://npm.pkg.github.com
+     //npm.pkg.github.com/:_authToken=${TOKEN}
     ```
 
     For example:
 
     ```
-    //npm.pkg.github.com/:_authToken=ashishayadav:12345abcde
+    @ashishayadav:registry=https://npm.pkg.github.com
+    //npm.pkg.github.com/:_authToken=12345abcde
     ```
 
     Save the `.npmrc` file.
